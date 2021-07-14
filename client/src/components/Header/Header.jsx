@@ -1,22 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
+import './Header.scss';
 
 function Header() {
-    return (
-        <div>
-            <nav>
-                <ul>
-                    <li>
+    return (    
+        <nav className="header">
+            <ul className="header__container">
+                <li className="header__container__list">
                     <Link to="/music">IB MUSIC APP</Link>
-                    </li>
-                    <li>
+                </li>
+                <li>
                     <Link to="/login">Login</Link>
-                    </li>
-                    <li>
+                </li>
+                <li>
                     <Link to="/register">Register</Link>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                </li>
+            </ul>
+        </nav>
     )
 }
 

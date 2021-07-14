@@ -1,0 +1,17 @@
+
+.header {
+  display: flex;
+
+  & > * {
+    display: flex;
+  }
+
+  &__container {
+    flex-grow: 1;
+    justify-content: space-around;
+
+    &__list {
+
+    }
+  }
+}
