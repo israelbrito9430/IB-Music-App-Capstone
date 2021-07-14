@@ -12,9 +12,9 @@ function WelcomePage() {
         <div className="wpcontainer">
             <h1>IB Music App</h1>
             <div className="wpcontainer__cardlist">
-                <CardComponent title="REGISTRATION" img={registration_background} />                
-                <CardComponent title="LISTEN TO MUSIC" img={ListentoMusic} />
-                <CardComponent title="LOGIN" img={LoginPic} />
+                <CardComponent title="REGISTRATION" img={registration_background} link="/register" />                
+                <CardComponent title="LISTEN TO MUSIC" img={ListentoMusic} link="/music" />
+                <CardComponent title="LOGIN" img={LoginPic} link="/login" />
             </div>
         </div>
     );

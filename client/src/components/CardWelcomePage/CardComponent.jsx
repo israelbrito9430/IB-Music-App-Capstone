@@ -1,12 +1,15 @@
 import React from 'react';
-import "./CardComponent.scss"
+import { Link } from "react-router-dom";
+
+import "./CardComponent.scss";
 
 function CardComponent(props) {
+
     return (
-        <div className="card">
+        <Link to={props.link} className="card">
             <div>{props.title}</div>
             <img className="card__img" src={props.img} alt="registration_background"/>
-        </div>
+        </Link>
     )
 }
 
