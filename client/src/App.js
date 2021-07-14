@@ -12,7 +12,7 @@ import LoginPage from "./pages/LoginPage/LoginPage"
   return (
     <Router>
       <div>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/">WelcomePage</Link>
@@ -30,29 +30,15 @@ import LoginPage from "./pages/LoginPage/LoginPage"
               <Link to="/user">UserPage</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
       
         <Switch>
-            <Route exact path="/">
-              <WelcomePage />
-            </Route>
-
-            <Route exact path="/music">
-              <MusicPage />
-            </Route>
-
-            <Route exact path="/login">
-              <LoginPage />
-            </Route>
-
-            <Route exact path="/register">
-              <RegisterPage />
-            </Route>
-
-            <Route exact path="/user">
-              <UserPage />
-            </Route>
+            <Route exact path="/" component={WelcomePage} />
+            <Route exact path="/music" component={MusicPage} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/register" component={RegisterPage} />
+            <Route exact path="/user" component={UserPage} />
         </Switch>
       </div>
     </Router>

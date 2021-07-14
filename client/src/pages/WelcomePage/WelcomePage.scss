@@ -1,12 +1,26 @@
-.welcome {
-    width: 100%;
-    &__text{
-        color: #131010;
-        
+.wpcontainer {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('../../assets/WelcomePic.jpg');
+
+    &__cardlist {
+        display: flex;
+        flex-direction: row;
     }
 
-    &__img{
-        width: 100%;
-        height: auto;
-    }
+    // &__img {
+    //     width: 100%;
+    //     height: auto;
+    // }
+
+
+// }
+// .card {
+//     &__regisImg {
+//         border: 1px solid #dadada;
+//         box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+//         transition: 0.2s;
+//         width: 50%;
+//     }
 }
