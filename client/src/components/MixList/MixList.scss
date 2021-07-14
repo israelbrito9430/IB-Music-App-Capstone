@@ -1,0 +1,11 @@
+.mixlist {
+  display: flex;
+
+  & > * {
+    display: flex;
+  }
+
+  &__card {
+    border: solid 1px #000;
+  }
+}
