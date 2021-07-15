@@ -3,10 +3,20 @@
     height: 100vh;
     flex-direction: column;
     background-image: url('../../assets/WelcomePic.jpg');
+    background-size: 100%;
+    background-position: center;
+
+    &__title {
+        text-align: center;
+    }
+
+
 
     &__cardlist {
         display: flex;
         flex-direction: row;
+        position: absolute;
+        bottom: 200px;
     }
 
     // &__img {
