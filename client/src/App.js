@@ -12,27 +12,6 @@ import LoginPage from "./pages/LoginPage/LoginPage"
   return (
     <Router>
       <div>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/">WelcomePage</Link>
-            </li>
-            <li>
-              <Link to="/music">MusicPage</Link>
-            </li>
-            <li>
-              <Link to="/login">LoginPage</Link>
-            </li>
-            <li>
-              <Link to="/register">RegisterPage</Link>
-            </li>
-            <li>
-              <Link to="/user">UserPage</Link>
-            </li>
-          </ul>
-        </nav> */}
-
-      
         <Switch>
             <Route exact path="/" component={WelcomePage} />
             <Route exact path="/music" component={MusicPage} />
