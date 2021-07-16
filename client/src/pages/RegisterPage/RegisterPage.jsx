@@ -9,10 +9,10 @@ function registerPage() {
     };
 
     return (
-        <div>
+        <div className="register">
             <Header />
             <h1>Register now!</h1>
-            <div className="register">
+            <div className="register__Form">
                 <div>
                     <label htmlFor="firstname">Firstname</label>
                     <input type="text" name="firstname" />
@@ -37,7 +37,7 @@ function registerPage() {
                     <label htmlFor="confirmPassword">Confirm Password</label>
                     <input type="password" name="confirmPassword"/>
                 </div>
-                <button onClick={handleClick}>Register</button>
+                <button className="register__button1" onClick={handleClick}>Register</button>
             </div>
         </div>
     )

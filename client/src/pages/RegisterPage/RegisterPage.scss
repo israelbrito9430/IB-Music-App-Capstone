@@ -1,4 +1,16 @@
 .register {
-  display: flex;
-  flex-direction: column;
+  background-image: url('../../assets/WelcomePic.jpg');
+
+    &__Form {
+      display: flex;
+      flex-direction: column;
+
+    &__button1 {
+      color: blue;
+      padding: 15px;
+      font-size: 25px;
+      width: 200px;
+      background-color: lightskyblue;
+  }
+}
 }
