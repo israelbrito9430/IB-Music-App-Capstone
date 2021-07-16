@@ -1,9 +1,9 @@
 import React from 'react'
 import "./WelcomePage.scss";
 
-import registration_background from "../../assets/registration_background.jpeg"
-import Nomusic_Nolife from "../../assets/Nomusic_Nolife.jpeg"
-import LoginPic from "../../assets/LoginPic.jpg"
+import registration_background from "../../assets/images/registration_background.jpeg"
+import Nomusic_Nolife from "../../assets/images/Nomusic_Nolife.jpeg"
+import LoginPic from "../../assets/images/LoginPic.jpg"
 import Card from "../../components/Card/Card"
 
 
