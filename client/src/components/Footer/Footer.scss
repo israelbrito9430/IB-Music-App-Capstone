@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  
+  &__section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+  
