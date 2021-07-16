@@ -1,11 +1,24 @@
 .mixlist {
   display: flex;
+  justify-content: center;
 
   & > * {
     display: flex;
   }
 
   &__card {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 5px;
+    width: 40rem;
     border: solid 1px #000;
+    align-items: center;
+    max-width: 500px;
+
+    .icon-play {
+      width: 80px;
+      height: 80px;
+    }
   }
 }
