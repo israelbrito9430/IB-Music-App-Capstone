@@ -1,9 +1,13 @@
 import React from 'react'
+import { useHistory } from "react-router-dom";
 import Header from "../../components/Header/Header";
 
 function LoginPage() {
+    const history = useHistory();
+
     const handleClick = () => {
         console.log('click');
+        history.push("/user");
     };
 
     return (
@@ -23,4 +27,4 @@ function LoginPage() {
     )
 }
 
-export default LoginPage
+export default LoginPage;
