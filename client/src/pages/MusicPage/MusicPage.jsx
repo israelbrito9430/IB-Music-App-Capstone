@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../../components/Header/Header";
 import MixList from '../../components/MixList/MixList';
-import PlayList from '../../components/Playlist/PlayList';
+import PlayList from '../../components/PlayList/PlayList';
 import MixForm from '../../components/MixForm/MixForm';
 import Footer from '../../components/Footer/Footer';
 
