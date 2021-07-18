@@ -7,12 +7,14 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage"
 import MusicPage from "./pages/MusicPage/MusicPage"
 import LoginPage from "./pages/LoginPage/LoginPage"
 
-import { useFirebaseApp } from 'reactfire';
+import { useFirebaseApp, useUser } from 'reactfire';
 
  function App() {
-
   const firebase = useFirebaseApp();
-  console.log('firebase: ', firebase);
+  const user = useUser();
+
+  // console.log('user: ', user);
+  // console.log('firebase: ', firebase);
 
   return (
     <Router>
