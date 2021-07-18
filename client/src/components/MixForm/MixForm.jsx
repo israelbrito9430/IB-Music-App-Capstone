@@ -20,7 +20,7 @@ function MixForm(props) {
           <div>
             <div>{props.title}</div>
             <div>
-              <audio class="my_audio" controls preload="none">
+              <audio controls preload="none">
                 <source src={camiloSong} type="audio/mpeg" />
                 <source src="audio/my_song.ogg" type="audio/ogg" />
               </audio>
