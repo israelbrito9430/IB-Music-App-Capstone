@@ -1,6 +1,6 @@
 
-import React from "react";
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import {BrowserRouter as Router,Switch,Route,Link, Redirect} from "react-router-dom";
 import WelcomePage from "./pages/WelcomePage/WelcomePage"
 import UserPage from "./pages/UserPage/UserPage"
 import RegisterPage from "./pages/RegisterPage/RegisterPage"
@@ -16,6 +16,7 @@ import { useFirebaseApp, useUser } from 'reactfire';
   // console.log('user: ', user);
   // console.log('firebase: ', firebase);
 
+
   return (
     <Router>
       <div>
@@ -24,7 +25,7 @@ import { useFirebaseApp, useUser } from 'reactfire';
             <Route exact path="/music" component={MusicPage} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/register" component={RegisterPage} />
-            <Route exact path="/user" component={UserPage} />
+            { user.data && user.data.email && <Route exact path="/user" component={UserPage} /> }
         </Switch>
       </div>
     </Router>
