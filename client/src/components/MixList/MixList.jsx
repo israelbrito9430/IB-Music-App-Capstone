@@ -10,11 +10,11 @@ function MixList(props) {
       <div className="mixlist">
         
         <div className="mixlist__card">
-          <div>
+          <div className="mixlist__profileimg">
               <img src={props.img} />
           </div>
           <div>
-            <div>{props.title}</div>
+            <div className="mixlist__title">{props.title}</div>
             <div>
               <img src={likesIcon} alt="Likes Icon" />
               <span>Likes</span>
