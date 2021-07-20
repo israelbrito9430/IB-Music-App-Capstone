@@ -1,36 +1,24 @@
+@import "../../_partials.scss/_global.scss";
+
 .wpcontainer {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-image: url("../../assets/images/WelcomePic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin: 2rem 0;
+    text-align: center;
+    color: $text-color;
+  }
+
+  &__card--list {
+    @include center;
+    position: relative;
+    justify-content: space-between;
     flex-direction: column;
-    background-image: url('../../assets/images/WelcomePic.jpg');
-    background-size: 100%;
-    background-position: center;
-
-    &__title {
-        text-align: center;
-    }
-
-
-
-    &__cardlist {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        bottom: 200px;
-    }
-
-    // &__img {
-    //     width: 100%;
-    //     height: auto;
-    // }
-
-
-// }
-// .card {
-//     &__regisImg {
-//         border: 1px solid #dadada;
-//         box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
-//         transition: 0.2s;
-//         width: 50%;
-//     }
+    height: inherit;
+  }
 }

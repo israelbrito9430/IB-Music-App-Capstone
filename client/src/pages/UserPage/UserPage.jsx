@@ -29,7 +29,7 @@ function UserPage() {
             <Header />
             <h2>User Page</h2>
             { user.data?.email && <button onClick={handleLogout}>Logout</button>}
-            <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+            <div>
                 <Profile data={data} />
                 <UploadForm />
             </div>
