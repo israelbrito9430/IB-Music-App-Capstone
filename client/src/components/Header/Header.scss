@@ -1,17 +1,43 @@
+@import "../../_partials.scss/_global.scss";
 
 .header {
+  width: 100%;
   display: flex;
 
-  & > * {
-    display: flex;
-  }
-
   &__container {
+    padding-left: 0;
+    padding-right: 2rem;
+
+    margin: 0;
     flex-grow: 1;
-    justify-content: space-around;
+    @include center;
+    justify-content: space-between;
 
-    &__list {
+    & li {
+      list-style: none;
+      padding: 0.5rem;
 
+      & a {
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: medium;
+      }
+
+      & img {
+        height: 10rem;
+      }
+    }
+
+    &__item {
+      text-decoration: none;
+      color: $text-color;
+
+      &--active {
+        color: $text-color;
+        text-decoration: underline;
+        text-decoration-color: $text-hover-1;
+        text-decoration-thickness: 25%;
+      }
     }
   }
 }

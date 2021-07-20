@@ -1,0 +1,65 @@
+// variables
+
+$text-color: #f5f9f5;
+$background-button: #68bd64;
+$text-hover: #303439;
+$text-hover-1: #f06525;
+
+// styles by tag
+html {
+  font-size: 12px;
+}
+
+h1 {
+  text-transform: uppercase;
+  width: 75%;
+  box-shadow: 5px 5px 34px 36px rgba(0, 0, 0, 0);
+  text-align: center;
+  color: $text-color;
+  border-radius: 5px;
+  margin: 0 auto 4rem;
+  padding: 0.5rem 1rem;
+  background-color: $background-button;
+}
+
+h2 {
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $text-hover;
+  }
+}
+
+// mixins
+@mixin ancor-style {
+  text-decoration: none;
+  color: $text-color;
+  border-color: $background-button;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style {
+  padding: 0.5rem 1rem;
+  color: $text-color;
+  font-weight: bolder;
+  background-color: $background-button;
+  border-color: $text-hover;
+  border-radius: 5px;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+    a {
+      color: $text-color;
+
+      &:hover {
+        color: $text-hover-1;
+      }
+    }
+  }
+}

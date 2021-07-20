@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './Header.scss';
 
 import { useUser } from 'reactfire';
+import logo from '../../assets/logo/logo-ib-app.png';
 
 function Header() {
     const user = useUser();
@@ -11,7 +12,7 @@ function Header() {
         <nav className="header">
             <ul className="header__container">
                 <li className="header__container__list">
-                    <Link to="/music">IB MUSIC APP</Link>
+                    <Link to="/music"><img src={logo} alt="Logo icon" /></Link>
                 </li>
                 { user.data && user.data.email ? (
                     <li>
@@ -20,10 +21,10 @@ function Header() {
                 ) : (                
                 <>
                     <li>
-                        <Link to="/login">Login</Link>
+                        <Link className="header__container__item" to="/login">Login</Link>
                     </li>
                     <li>
-                        <Link to="/register">Register</Link>
+                        <Link className="header__container__item--active" to="/register">Register</Link>
                     </li>
                 </>
                 )
