@@ -20,7 +20,7 @@ function MixList(props) {
               <span>Likes</span>
             </div>
           </div>
-          <div>
+          <div className="mixlist__playIcon">
             <img className="icon-play" src={playIcon} alt="Likes Icon" />
           </div>
         </div>

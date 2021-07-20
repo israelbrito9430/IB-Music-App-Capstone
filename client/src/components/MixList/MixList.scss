@@ -4,10 +4,6 @@
   display: flex;
   justify-content: center;
 
-  & > * {
-    display: flex;
-  }
-
   &__card {
     display: flex;
     justify-content: space-between;
@@ -19,24 +15,26 @@
     border-style: inset;
   }
 
-    &__profileimg img{ 
-      height: 5rem;
-      border-radius: 3rem;
-    }
-    &__title {
-      color: $text-color;
-      font-size: 1.2rem;
-      text-decoration: underline;
-      text-decoration-color: #f06525;
-      text-decoration-thickness: 10%;
-    }
+  &__profileimg img {
+    height: 5rem;
+    border-radius: 3rem;
+  }
 
-    
+  &__title {
+    color: $text-color;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-decoration-color: #f06525;
+    text-decoration-thickness: 10%;
+  }
 
-   
+  &__playIcon {
+    display: flex;
+    align-items: center;
+  }
+}
 
-    .icon-play {
-      width: 4rem;
-      height: 4rem;
-    }
+.icon-play {
+  width: 4rem;
+  height: 4rem;
 }

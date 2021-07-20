@@ -28,7 +28,7 @@ function MixForm(props) {
             </div>
           </div>
             <div>
-              <audio controls preload="none">
+              <audio className="mixform__audio" controls preload="none">
                 <source src={camiloSong} type="audio/mpeg" />
                 <source src="audio/my_song.ogg" type="audio/ogg" />
               </audio>

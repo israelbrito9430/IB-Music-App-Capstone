@@ -15,10 +15,4 @@
     border: none;
     border-radius: 6px;
   }
-
-  &__button {
-    margin: auto 4%;
-    @include button-style;
-    margin-bottom: 15rem;
-  }
 }

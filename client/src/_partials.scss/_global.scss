@@ -11,15 +11,17 @@ html {
 }
 
 h1 {
-  text-transform: uppercase;
-  width: 75%;
-  box-shadow: 5px 5px 34px 36px rgba(0, 0, 0, 0);
-  text-align: center;
-  color: $text-color;
-  border-radius: 5px;
-  margin: 0 auto 4rem;
+  margin: 0rem auto 4rem;
   padding: 0.5rem 1rem;
+  width: 75%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $text-color;
+  text-align: center;
+  text-transform: uppercase;
   background-color: $background-button;
+  box-shadow: 5px 5px 34px 36px rgba(0, 0, 0, 0);
+  border-radius: 5px;
 }
 
 h2 {
@@ -27,6 +29,22 @@ h2 {
     text-decoration: underline;
     text-decoration-color: $text-hover;
   }
+}
+
+button {
+  padding: 0.5rem 1rem;
+  max-width: 9rem;
+  color: $text-color;
+  font-weight: bolder;
+  background-color: $background-button;
+  border-color: $text-hover;
+  border-radius: 5px;
+}
+
+label {
+  color: $text-color;
+  font-weight: bolder;
+  font-size: 1.3rem;
 }
 
 // mixins
@@ -42,13 +60,9 @@ h2 {
   align-items: center;
 }
 
-@mixin button-style {
-  padding: 0.5rem 1rem;
-  color: $text-color;
-  font-weight: bolder;
-  background-color: $background-button;
-  border-color: $text-hover;
-  border-radius: 5px;
+@mixin background-properties {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @mixin tablet {

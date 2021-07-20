@@ -47,7 +47,7 @@ function UploadForm(props) {
               <label htmlFor="song-file">Song</label>
               <input type="file" id="song-file" name="song-file" accept=".mp3,audio/*" onChange={e => handleChange(e, 'songFile')} />
             </div>
-            <button className="register__button1" onClick={handleClick}>Register</button>
+            <button className="register__button1" onClick={handleClick}>UPLOAD</button>
           </form>
       </div>
     )
