@@ -15,27 +15,28 @@ function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const [errorMsg, setErrorMsg] = useState(null);
+
     useEffect(() => {
         if(user.data && user.data.email) {
             history.push("/user");
         }
     }, []);
 
-    const handleClick = async () => {
-        //create new user on firebase auth
-        await firebase.auth().createUserWithEmailAndPassword(email, password);
-    };
-
-    const handleLogin = async () => {
-        await firebase.auth().signInWithEmailAndPassword(email, password);
-        history.push("/user");
+    const handleLogin = async () => {        
+        await firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((response) => {
+            setErrorMsg(null);
+            history.push("/user");
+           })
+        .catch(error => {
+            setErrorMsg(error.message);
+        });
     };
 
     const handleLogout = async () => {
         await firebase.auth().signOut();
     };
-
-    // console.log('user: ', user);
 
     return (
         <div>
@@ -51,6 +52,7 @@ function LoginPage() {
                 <input type="password" name="Password" onChange={(e) => setPassword(e.target.value)} />
             </div>
             <button onClick={handleLogin}>Login</button>
+            {errorMsg && <div style={{ backgroundColor: 'orange'}}>{ errorMsg }</div>}
         </div>
     )
 }
