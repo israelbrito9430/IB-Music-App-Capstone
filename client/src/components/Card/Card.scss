@@ -1,16 +1,16 @@
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
+@import "../../_partials.scss/_global.scss";
 
-    & > * {
-        display: flex;
-    }
-    
-    &__img {
-        width: 90%;
-        height: 30rem;
-        border: solid;
-    }
+.card {
+  flex-grow: 1;
+  @include center;
+
+  &__img {
+    height: 10rem;
+    width: 90%;
+  }
+
+  & h2 {
+    position: absolute;
+    @include ancor-style;
+  }
 }

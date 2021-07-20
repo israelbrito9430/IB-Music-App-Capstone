@@ -23,9 +23,9 @@ class CommentForm extends React.Component {
     return (
       <div className="CommentForm">
         <div className="CommentForm__container">
-          <div className="CommentForm__container__box">
+          <div className="CommentForm__form">
             <textarea 
-              className="CommentForm__container__box__input"
+              className="CommentForm__input"
               type="text" 
               placeholder="Write comment here"
               value={this.state.value}

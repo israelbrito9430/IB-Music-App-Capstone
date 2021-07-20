@@ -7,7 +7,7 @@ function CardComponent(props) {
 
     return (
         <Link to={props.link} className="card">
-            <div>{props.title}</div>
+            <h2>{props.title}</h2>
             <img className="card__img" src={props.img} alt="registration_background"/>
         </Link>
     )

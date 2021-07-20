@@ -1,3 +1,23 @@
-.CommentForm {
+@import "../../_partials.scss/_global.scss";
 
+.CommentForm {
+  text-align: right;
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__input {
+    margin: 1rem;
+    padding-left: 0.5rem;
+    width: 90%;
+    border: none;
+    border-radius: 6px;
+  }
+
+  &__button {
+    margin: auto 4%;
+    @include button-style;
+  }
 }
