@@ -5,6 +5,7 @@ import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
 
 import Header from "../../components/Header/Header";
+import './LoginPage.scss';
 
 function LoginPage() {
     const history = useHistory();
@@ -39,20 +40,22 @@ function LoginPage() {
     };
 
     return (
-        <div>
+        <div className="login">
             <Header />
             <h1>Login</h1>
             { user.data?.email && <button onClick={handleLogout}>Logout</button>}
-            <div>
-                <label htmlFor="email">Email</label>
-                <input type="text" name="email" onChange={(e) => setEmail(e.target.value)} />
+            <div className="login__form">
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <input type="text" name="email" onChange={(e) => setEmail(e.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor="password">Password</label>
+                    <input type="password" name="Password" onChange={(e) => setPassword(e.target.value)} />
+                </div>
+                <button className="button2" onClick={handleLogin}>Login</button>
+                {errorMsg && <div>{ errorMsg }</div>}
             </div>
-            <div>
-                <label htmlFor="password">Password</label>
-                <input type="password" name="Password" onChange={(e) => setPassword(e.target.value)} />
-            </div>
-            <button onClick={handleLogin}>Login</button>
-            {errorMsg && <div style={{ backgroundColor: 'orange'}}>{ errorMsg }</div>}
         </div>
     )
 }

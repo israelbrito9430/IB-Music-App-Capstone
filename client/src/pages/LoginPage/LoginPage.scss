@@ -1,0 +1,54 @@
+@import "../../_partials.scss/_global.scss";
+
+.login {
+  background-image: url("../../assets/images/login-background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  // background-position: top;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 95%;
+
+    & div {
+      text-align: end;
+      padding-bottom: 1rem;
+
+      & label {
+        color: $text-color;
+        font-weight: bolder;
+        font-size: 1.2rem;
+      }
+
+      & input {
+        margin-left: 1rem;
+        border-radius: 3px;
+        border-color: $text-hover;
+      }
+    }
+  }
+
+  & h1 {
+    width: 75%;
+    box-shadow: 5px 5px 34px 36px rgba(0, 0, 0, 0);
+    text-align: center;
+    color: $text-color;
+    border-radius: 5px;
+    margin: 3rem auto;
+    padding: 0.5rem 1rem;
+    background-color: $background-button;
+  }
+}
+
+.button2 {
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-weight: bolder;
+  margin: 2rem auto;
+  color: $text-color;
+  background-color: $background-button;
+  border-color: $text-hover;
+}
