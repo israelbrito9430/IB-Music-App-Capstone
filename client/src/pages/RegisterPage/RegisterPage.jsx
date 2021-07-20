@@ -100,7 +100,7 @@ function RegisterPage() {
                 </div>
                 <button className="register__button1" onClick={handleClick} disabled={errorMsg}>Register</button>
             </div>
-            {errorMsg && <div style={{ backgroundColor: 'orange'}}>{errorMsg}</div>}
+            {errorMsg && <div>{errorMsg}</div>}
         </div>
     )
 }

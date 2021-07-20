@@ -6,8 +6,6 @@
 
   & > * {
     display: flex;
-
-    
   }
 
   &__card {
@@ -18,6 +16,7 @@
     border: solid 5px $background-button;
     border-radius: 0.8rem;
     margin-bottom: 1rem;
+    border-style: inset;
   }
 
     &__profileimg img{ 
@@ -26,7 +25,10 @@
     }
     &__title {
       color: $text-color;
-      font-size: initial;
+      font-size: 1.2rem;
+      text-decoration: underline;
+      text-decoration-color: #f06525;
+      text-decoration-thickness: 10%;
     }
 
     

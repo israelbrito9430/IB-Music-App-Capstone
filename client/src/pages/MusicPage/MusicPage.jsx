@@ -24,7 +24,7 @@ function MusicPage() {
                 <MixList title="Rock Mix" img="https://via.placeholder.com/100" />
             </div>
             <div>
-                <PlayList />
+                {/* <PlayList /> */}
             </div>
             <Footer />
         </div>
