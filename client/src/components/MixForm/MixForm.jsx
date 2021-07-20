@@ -14,23 +14,25 @@ function MixForm(props) {
       <div className="mixform">
         
         <div className="mixform__card">
-          <div>
-              <img src={props.img} />
+          <div className="mixform__text">
+            <div className="mixform__image">
+                <img src={props.img} />
+            </div>
+          <div className="mixfor__title--container">
+            <div className="mixform__title">{props.title}</div>
           </div>
-          <div>
-            <div>{props.title}</div>
+            <div className="mixform__icon--container">
+              {/* <img className="icon-play" src={playIcon} alt="Likes Icon" /> */}
+              <img className="mixform__icon--icons" src={likesIcon} alt="Likes Icon" />
+              <img className="mixform__icon--icons" src={viewIcon} alt="View Icon" />
+            </div>
+          </div>
             <div>
               <audio controls preload="none">
                 <source src={camiloSong} type="audio/mpeg" />
                 <source src="audio/my_song.ogg" type="audio/ogg" />
               </audio>
             </div>
-          </div>
-          <div>
-            {/* <img className="icon-play" src={playIcon} alt="Likes Icon" /> */}
-            <img className="icon" src={likesIcon} alt="Likes Icon" />
-            <img className="icon" src={viewIcon} alt="View Icon" />
-          </div>
         </div>
       </div>
       <CommentForm />
