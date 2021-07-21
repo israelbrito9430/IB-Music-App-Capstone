@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import './UploadForm.scss';
 
+import { useFirebaseApp, useUser } from 'reactfire';
+import 'firebase/storage';
+
 function UploadForm(props) {
+  const firebase = useFirebaseApp();
+  const storage = firebase.storage();
 
   const [form, setForm] = useState({
     title: '',
@@ -14,8 +19,86 @@ function UploadForm(props) {
     setForm({...form, [element]: e.target.value});
   };
 
-  const handleClick = () => {
+  const handleFile = (e, element) => {
+    e.preventDefault();
+    setForm({...form, [element]: e.target.files[0]});
+  };
+
+  const uploadImageFile = (file, callback) => {
+    const storageRef = storage.ref('images')
+    const uploadTask = storageRef.child('image_'+ file.name).put(file);
+
+    uploadTask.on('state_changed', snapshot => {
+      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      callback({ progress });
+    }, error => {
+      callback({ error });
+    }, () => {
+      const downloadURL = uploadTask.snapshot.downloadURL;
+      callback({ downloadURL });
+    });
+  };
+
+  const uploadAudioFile = (file, callback) => {
+    const storageRef = storage.ref('audios')
+    const uploadTask = storageRef.child('audio_'+ file.name).put(file);
+
+    uploadTask.on('state_changed', snapshot => {
+      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      console.log('progress: ', progress);
+      callback({ progress });
+    }, error => {
+      callback({ error });
+    }, () => {
+      const downloadURL = uploadTask.snapshot.downloadURL;
+      callback({ downloadURL });
+    });
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
     console.log('click upload form: ', form);
+
+    uploadImageFile(form.imageUrl, result => {
+      if (result.progress) {
+        console.log('result.progress: ', result.progress);
+        // Handle progress
+        return;
+      }
+  
+      if (result.downloadURL) {
+        console.log('result.downloadURL: ', result.downloadURL);
+        // setForm({ ...form, imageUrl: result.downloadURL });
+        return;
+      }
+  
+      if (result.error) {
+        // Handle error
+        console.log('result: ', result.error);
+      }
+    });
+
+    uploadAudioFile(form.songFile, result => {
+      if (result.progress) {
+        console.log('result.progress: ', result.progress);
+        // Handle progress
+        return;
+      }
+  
+      if (result.downloadURL) {
+        console.log('result.downloadURL: ', result.downloadURL);
+        // setForm({ ...form, songFile: result.downloadURL });
+        return;
+      }
+  
+      if (result.error) {
+        // Handle error
+        console.log('result: ', result.error);
+      }
+    });
+
+    // save form on database
+
   };
 
     return (    
@@ -41,13 +124,13 @@ function UploadForm(props) {
             </div>
             <div>
               <label htmlFor="image-file">Image</label>
-              <input type="file" id="image-file" name="image-file" accept="image/png, image/jpeg" onChange={e => handleChange(e, 'imageUrl')} />
+              <input type="file" id="image-file" name="image-file" accept="image/png, image/jpeg" onChange={e => handleFile(e, 'imageUrl')} />
             </div>
             <div>
               <label htmlFor="song-file">Song</label>
-              <input type="file" id="song-file" name="song-file" accept=".mp3,audio/*" onChange={e => handleChange(e, 'songFile')} />
+              <input type="file" id="song-file" name="song-file" accept=".mp3,audio/*" onChange={e => handleFile(e, 'songFile')} />
             </div>
-            <button className="register__button1" onClick={handleClick}>UPLOAD</button>
+            <button className="register__button1" onClick={handleClick}>Register</button>
           </form>
       </div>
     )
