@@ -1,0 +1,23 @@
+@import "../../_partials.scss/_global.scss";
+
+.userPage {
+  padding: 0 2rem;
+  color: $text-color;
+  background-image: url("../../assets/images/userpage.jpg");
+  display: flex;
+  flex-direction: column;
+  @include background-properties;
+
+  & button {
+    align-self: flex-end;
+  }
+
+  & input {
+    margin: 1rem 0 1rem 1.5rem;
+  }
+
+  &__container {
+    width: 95%;
+    text-align: right;
+  }
+}
