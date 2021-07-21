@@ -22,6 +22,7 @@ h1 {
   background-color: $background-button;
   box-shadow: 5px 5px 34px 36px rgba(0, 0, 0, 0);
   border-radius: 5px;
+  margin-bottom: 0.7rem;
 }
 
 h2 {
@@ -39,7 +40,9 @@ button {
   background-color: $background-button;
   border-color: $text-hover;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
+
 
 label {
   color: $text-color;

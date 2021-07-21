@@ -14,10 +14,10 @@ function UserPage() {
     const history = useHistory();
 
     const data = {
-        firstname: 'Carl',
-        lastname: 'Brith',
-        email: 'carlsbrith@gmail.com',
-        username: 'carl-brith',
+        firstname: 'jon',
+        lastname: 'Barson',
+        email: 'jbarson01@gmail.com',
+        username: 'jon_barson',
     }
 
     const handleLogout = async () => {

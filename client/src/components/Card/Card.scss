@@ -7,10 +7,15 @@
   &__img {
     height: 10rem;
     width: 90%;
+    border-radius: 1.8rem;
+    border: solid;
+    color:$text-hover-1;
+    border-style: inset;
   }
 
   & h2 {
     position: absolute;
     @include ancor-style;
+    color:$text-color;
   }
 }

@@ -8,11 +8,12 @@
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
-    width: 75%;
-    border: solid 5px $background-button;
+    width: 95%;
+    border: solid 5px $text-hover;
     border-radius: 0.8rem;
     margin-bottom: 1rem;
     border-style: inset;
+    background-color: lightslategray;
   }
 
   &__profileimg img {

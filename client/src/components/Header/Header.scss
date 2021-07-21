@@ -21,6 +21,10 @@
         text-transform: uppercase;
         font-weight: bolder;
         font-size: medium;
+        text-decoration: none;
+        color:$text-color;
+        text-decoration: underline;
+        text-decoration-color: $text-hover-1;
       }
 
       & img {

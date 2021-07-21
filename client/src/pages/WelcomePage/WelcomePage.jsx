@@ -5,12 +5,13 @@ import registration_background from "../../assets/images/registration_background
 import Nomusic_Nolife from "../../assets/images/Nomusic_Nolife.jpeg"
 import LoginPic from "../../assets/images/LoginPic.jpg"
 import Card from "../../components/Card/Card"
+import Header from '../../components/Header/Header'
 
 
 function WelcomePage() {
     return (
         <div className="wpcontainer">
-            <h1 className="wpcontainer__title"> IB Music App</h1>
+           <Header />
             <div className="wpcontainer__card--list">
                 <Card title="REGISTRATION" img={registration_background} link="/register" />                
                 <Card title="LISTEN TO MUSIC" img={Nomusic_Nolife} link="/music" />

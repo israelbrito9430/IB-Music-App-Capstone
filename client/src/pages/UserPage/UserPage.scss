@@ -3,7 +3,10 @@
 .userPage {
   padding: 0 2rem;
   color: $text-color;
-  background-image: url("../../assets/images/userpage.jpg");
+  background-image: url("../../assets/images/piano-349928_1920.jpg");
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   display: flex;
   flex-direction: column;
   @include background-properties;

@@ -13,7 +13,7 @@
     width: 95%;
 
     & div {
-      text-align: end;
+      text-align: center;
       padding-bottom: 1rem;
 
       & label {
@@ -36,6 +36,7 @@
     color: $text-hover-1;
     text-align: center;
     padding-bottom: 3rem;
+    text-shadow: 3px 1px $text-hover;
   }
 }
 
