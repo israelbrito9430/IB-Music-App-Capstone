@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import './Header.scss';
 
 import { useUser } from 'reactfire';
@@ -7,6 +7,9 @@ import logo from '../../assets/logo/logo-ib-app.png';
 
 function Header() {
     const user = useUser();
+    const history = useHistory();
+    const isPathLogin = history.location.pathname === '/login';
+    const isPathRegister = history.location.pathname === '/register';
 
     return (    
         <nav className="header">
@@ -21,10 +24,14 @@ function Header() {
                 ) : (                
                 <>
                     <li>
-                        <Link className="header__container__item" to="/login">Login</Link>
+                        <Link 
+                            className={isPathLogin ? 'header__container__item--active' : 'header__container__item'}
+                            to="/login">Login</Link>
                     </li>
                     <li>
-                        <Link className="header__container__item--active" to="/register">Register</Link>
+                        <Link 
+                            className={isPathRegister ? 'header__container__item--active' : 'header__container__item'}
+                            to="/register" >Register</Link>
                     </li>
                 </>
                 )
