@@ -17,10 +17,12 @@
 
   & input {
     margin: 1rem 0 1rem 1.5rem;
+    margin:0px;
   }
 
   &__container {
     width: 95%;
-    text-align: right;
+    display: contents;
+    text-align: inherit;
   }
 }

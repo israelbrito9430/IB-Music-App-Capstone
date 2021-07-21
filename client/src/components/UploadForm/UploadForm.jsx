@@ -102,8 +102,8 @@ function UploadForm(props) {
   };
 
     return (    
-      <div className="upload-form">
-          <h3>Upload Music</h3>
+      <div className="uploadForm">
+          <h3 className="uploadForm__title">Upload Music</h3>
           <form>
             <div>
               <label htmlFor="title">title</label>
@@ -123,15 +123,17 @@ function UploadForm(props) {
               </select>
             </div>
             <div>
-              <label htmlFor="image-file">Image</label>
-              <input type="file" id="image-file" name="image-file" accept="image/png, image/jpeg" onChange={e => handleFile(e, 'imageUrl')} />
+              <div>
+                <label htmlFor="image-file">Image</label>
+                <input type="file" id="image-file" name="image-file" accept="image/png, image/jpeg" onChange={e => handleFile(e, 'imageUrl')} />
+              </div>
+              <div>
+                <label htmlFor="song-file">Song</label>
+                <input type="file" id="song-file" name="song-file" accept=".mp3,audio/*" onChange={e => handleFile(e, 'songFile')} />
+              </div>
             </div>
-            <div>
-              <label htmlFor="song-file">Song</label>
-              <input type="file" id="song-file" name="song-file" accept=".mp3,audio/*" onChange={e => handleFile(e, 'songFile')} />
-            </div>
-            <button className="register__button1" onClick={handleClick}>Register</button>
-          </form>
+              <button className="register__button1" onClick={handleClick}>Upload</button>
+            </form>
       </div>
     )
 }

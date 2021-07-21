@@ -1,0 +1,9 @@
+@import "../../_partials.scss/_global.scss";
+.uploadForm {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        color: #f06525;
+        font-size: 1.5rem;
+    }
+}

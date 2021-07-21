@@ -16,6 +16,7 @@ import EstaVida from "../../assets/music/Esta-Vida.mp3";
 import MichaelJackson from "../../assets/music/MichaelJackson-TheWayYouMakeMeFeel.mp3";
 import OyeMiAmor from "../../assets/music/OyeMiAmor.mp3";
 import PianoMan from "../../assets/music/PianoMan(Live).mp3";
+import LaRebelion from "../../assets/music/Joe Arroyo - La Rebelion.mp3"
 
 
 function MusicPage() {
@@ -42,11 +43,11 @@ function MusicPage() {
             
             <div>
            
-                <MixList title="Regueton Mix" image="https://via.placeholder.com/100" song={EstaVida} />
+                <MixList title="Vallenato Mix" image="https://via.placeholder.com/100" song={EstaVida} />
                 <MixList title="Pop Mix" image="https://via.placeholder.com/100" song={MichaelJackson} />
-                <MixList title="Salsa Mix" image="https://via.placeholder.com/100" song={OyeMiAmor} />
-                <MixList title="Vallenato Mix" image="https://via.placeholder.com/100" song={PianoMan} />
-                <MixList title="Rock Mix" image="https://via.placeholder.com/100" song={MichaelJackson} />
+                <MixList title="Rock Mix" image="https://via.placeholder.com/100" song={OyeMiAmor} />
+                <MixList title="Top Classic Mix" image="https://via.placeholder.com/100" song={PianoMan} />
+                <MixList title="Salsa Mix" image="https://via.placeholder.com/100" song={LaRebelion} />
             </div>
             <div>
                 

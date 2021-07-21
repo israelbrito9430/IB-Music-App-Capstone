@@ -4,7 +4,7 @@ import './Profle.scss';
 function Profile(props) {
     return (    
       <div className="profile">
-        <h3>Profile Data</h3>
+        <h3 className="profile__title">Profile Data</h3>
         <div>
           <label htmlFor="firstname">Firstname</label>
           <input type="text" name="firstname" value={props.data.firstname} disabled />

@@ -1,3 +1,11 @@
+@import "../../_partials.scss/_global.scss";
+
 .profile {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        color: $text-hover-1;
+        font-size: 1.5rem;
+    }
   
 }
