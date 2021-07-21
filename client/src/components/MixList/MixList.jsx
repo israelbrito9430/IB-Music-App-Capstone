@@ -11,7 +11,7 @@ function MixList(props) {
         
         <div className="mixlist__card">
           <div className="mixlist__profileimg">
-              <img src={props.img} />
+              <img src={props.image} />
           </div>
           <div>
             <div className="mixlist__title">{props.title}</div>
@@ -21,7 +21,11 @@ function MixList(props) {
             </div>
           </div>
           <div className="mixlist__playIcon">
-            <img className="icon-play" src={playIcon} alt="Likes Icon" />
+            {/* <img className="icon-play" src={playIcon} alt="Likes Icon" /> */}
+              <audio className="mixform__audio" controls preload="none">
+                <source src={props.song} type="audio/mpeg" />
+                <source src="audio/my_song.ogg" type="audio/ogg" />
+              </audio>
           </div>
         </div>
 
