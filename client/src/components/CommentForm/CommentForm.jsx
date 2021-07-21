@@ -1,41 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CommentForm.scss'
 
-class CommentForm extends React.Component {
+const CommentForm = (props) => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-        value: ''
-    };
-  } 
+  const [comment, setComment] = useState('');
 
-  handleChange = (e) => {
-    this.setState({ value: e.target.value})
-  }
+  const handleChange = (e) => {
+    setComment(e.target.value);
+  };
 
-  handleClick = () => {
-    this.props.handleClick(this.state.value);
-    this.setState({ value: '' });
-  }
-
-  render() {
-    return (
-      <div className="CommentForm">
-        <div className="CommentForm__container">
-          <div className="CommentForm__form">
-            <textarea 
-              className="CommentForm__input"
-              type="text" 
-              placeholder="Write comment here"
-              value={this.state.value}
-              onChange={this.handleChange} />
-          </div>
+  return (
+    <div className="CommentForm">
+      <div className="CommentForm__container">
+        <div className="CommentForm__form">
+          <textarea 
+            className="CommentForm__input"
+            type="text" 
+            placeholder="Write comment here"
+            value={comment}
+            onChange={handleChange} />
         </div>
-        <button className="CommentForm__button blueButton" onClick={this.handleClick}>COMMENT</button>
       </div>
-    )
-  }
+      <button className="CommentForm__button blueButton" onClick={() => props.handleClick(comment)}>COMMENT</button>
+    </div>
+  )
 }
 
 export default CommentForm;
