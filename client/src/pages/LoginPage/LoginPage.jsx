@@ -54,7 +54,7 @@ function LoginPage() {
                     <input type="password" name="Password" onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <button className="button2" onClick={handleLogin}>Login</button>
-                {errorMsg && <div>{ errorMsg }</div>}
+                {errorMsg && <div className="login__error">{ errorMsg }</div>}
             </div>
         </div>
     )
